@@ -14,7 +14,7 @@ const socialImage = `/media/social/today.png?v=${today.business_date}-${today.sn
 
 <SiteLayout
   title="梁相"
-  description="长在 DeepSeek Harness 里的社区插件。每天一道梁案，用香火投下夯或拉，众香汇成梁位，共同显出今日梁相。"
+  description="梁股开盘了！对话攒香火，夯拉定梁位；早午晚三盘做多做空，午夜揭晓，在线香火与收益跨日保留。"
   pageClass="home-page"
 >
   <section class="home-hero">
@@ -23,17 +23,17 @@ const socialImage = `/media/social/today.png?v=${today.business_date}-${today.sn
     <div class="shell hero-layout">
       <div class="hero-copy" data-reveal>
         <p class="eyebrow">DeepSeek Harness 社区插件</p>
-        <h1>今天的梁子，<span>夯上去还是拉下来？</span></h1>
-        <p class="hero-lede">每天一道梁案。你在 DSH 里写代码、跑会话，Token 凝成香火；一炷一票，所有人的选择汇成梁位，决定今天的梁子。</p>
+        <h1>香火能攒了，<span>梁股开盘了。</span></h1>
+        <p class="hero-lede">对话攒香火，夯拉定梁位；早午晚三盘做多做空，K线和潮汐看实时行情，午夜一起揭晓。在线香火与收益跨日保留，明天接着玩。</p>
         <div class="hero-actions">
           <button class="button button-primary" type="button" data-deploy-open>安装梁相</button>
           <a class="button button-ghost" href="#how">看懂玩法</a>
         </div>
         <div class="hero-facts" aria-label="梁相特点">
           <span>新香客备 10 炷</span>
-          <span>点按上香</span>
-          <span>长按倾炉</span>
-          <span>可选日终自动上香</span>
+          <span>在线香火跨日保留</span>
+          <span>梁股早午晚三盘</span>
+          <span>午夜一起揭晓</span>
         </div>
       </div>
 
@@ -94,11 +94,10 @@ const socialImage = `/media/social/today.png?v=${today.business_date}-${today.sn
         <p>输入与输出 Token 按模型折成香火。香火环告诉你还剩多少，以及下一炷走到哪里；点一下投一炷，长按按限额批量上香。</p>
       </div>
 
-      <figure class="product-frame" data-reveal>
-        <div class="window-bar"><span><i></i><i></i><i></i></span><small>梁相主界面</small><em>2160 × 2160 实机录屏</em></div>
-        <video autoplay muted loop playsinline preload="metadata" poster="/media/product/liangxiang-main-2k.jpg" aria-label="梁相在 DeepSeek Harness 中的操作演示">
-          <source src="/media/product/liangxiang-vote-2k.mp4" type="video/mp4" />
-        </video>
+      <figure class="product-frame product-frame-main" data-reveal>
+        <div class="window-bar"><span><i></i><i></i><i></i></span><small>梁相主UI</small><em>2.0.0</em></div>
+        <img class="product-shot" src="/media/product/2.0.0/main.webp" alt="梁相主UI：浅蓝水景、梁子与香火环" width="512" height="728" loading="lazy" />
+        <figcaption>功能示例，香火数据仅作演示。</figcaption>
       </figure>
 
       <div class="flow-grid" data-reveal>
@@ -107,6 +106,20 @@ const socialImage = `/media/social/today.png?v=${today.business_date}-${today.sn
         <article><span>03</span><strong>显相</strong><p>众香汇成梁位，梁子依势变化。</p></article>
         <article><span>04</span><strong>入祠</strong><p>每日结案，再汇成周梁与月梁。</p></article>
       </div>
+    </div>
+  </section>
+
+  <section class="product-section" id="market">
+    <div class="shell">
+      <div class="section-intro split-intro" data-reveal>
+        <div><p class="eyebrow">梁股 · 香火市场</p><h2>早午晚三盘，午夜一起揭晓。</h2></div>
+        <p>每盘独立选多空，封盘前可改可撤。K线、潮汐随你切换，梁位、持仓与回执集中看；投入、撤回和到账都有轻声回应。</p>
+      </div>
+      <figure class="product-frame" data-reveal>
+        <div class="window-bar"><span><i></i><i></i><i></i></span><small>梁股 · 香火市场</small><em>2.0.0</em></div>
+        <img class="product-shot" src="/media/product/2.0.0/market.webp" alt="梁股香火市场：行情、三盘投入与个人钱包" width="1600" height="1024" loading="lazy" />
+        <figcaption>功能示例，香火数据仅作演示。香火只用于插件内游玩，不兑换现金。</figcaption>
+      </figure>
     </div>
   </section>
 
@@ -140,9 +153,8 @@ const socialImage = `/media/social/today.png?v=${today.business_date}-${today.sn
         <div class="archive-tags"><span>日梁</span><span>周梁</span><span>月梁</span></div>
       </div>
       <figure class="archive-frame" data-reveal>
-        <video autoplay muted loop playsinline preload="metadata" poster="/media/product/liangxiang-liangci-2k.jpg" aria-label="梁祠日历打开演示">
-          <source src="/media/product/liangxiang-liangci-2k.mp4" type="video/mp4" />
-        </video>
+        <img class="product-shot" src="/media/product/2.0.0/liangci.webp" alt="梁祠：日梁、周梁与月梁日历" width="1760" height="1520" loading="lazy" />
+        <figcaption>功能示例，香火数据仅作演示。</figcaption>
       </figure>
     </div>
   </section>
@@ -157,9 +169,9 @@ const socialImage = `/media/social/today.png?v=${today.business_date}-${today.sn
   <script is:inline type="application/ld+json" set:html={JSON.stringify({
     '@context': 'https://schema.org', '@type': 'SoftwareApplication', name: '梁相', alternateName: 'liangxiang',
     applicationCategory: 'DeveloperApplication', operatingSystem: 'Windows, macOS, Linux',
-    description: '长在 DeepSeek Harness 里的社区插件。每天一道梁案，用香火投下夯或拉。',
+    description: '梁相是DeepSeek Harness社区插件：在线香火跨日保留，梁股早午晚三盘做多做空，午夜一起揭晓。',
     url: 'https://liang.today', codeRepository: 'https://github.com/liang-today/dsh-liangxiang',
-    softwareVersion: '1.2.0', license: 'https://opensource.org/license/mit',
+    softwareVersion: '2.0.0', license: 'https://opensource.org/license/mit',
   })} />
 
   <script>

@@ -581,6 +581,11 @@ svg { display: block; }
 .window-bar small { justify-self: center; }
 .window-bar em { justify-self: end; font-style: normal; }
 
+.product-frame-main { width: min(360px, 100%); }
+.product-shot { display: block; width: 100%; height: auto; }
+.product-frame figcaption,
+.archive-frame figcaption { margin: 0; padding: 10px 16px; color: #a7a8a7; font-size: 12px; line-height: 1.5; }
+
 .product-frame video {
   width: 100%;
   aspect-ratio: 1;
@@ -975,4 +980,8 @@ svg { display: block; }
   html { scroll-behavior: auto; }
   *, *::before, *::after { scroll-behavior: auto !important; animation-duration: 0.01ms !important; animation-iteration-count: 1 !important; transition-duration: 0.01ms !important; }
   .js [data-reveal] { opacity: 1; transform: none; }
+}
+
+@media (max-width: 480px) {
+  .prose th, .prose td { padding: 10px 7px; }
 }

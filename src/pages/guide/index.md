@@ -3,7 +3,7 @@ layout: ../../layouts/MarkdownLayout.astro
 title: 安装指南
 description: 在 DeepSeek Harness Desktop 的插件市场安装梁相，或使用 Cmd / Web 命令行安装、升级和卸载。
 eyebrow: 安装指南
-aside: Desktop 优先用内置插件市场，无需安装 Node.js 或输入命令。当前公开版是 v1.2.0。
+aside: Desktop 优先用内置插件市场，无需安装 Node.js 或输入命令。当前公开版是 v2.0.0。
 sections:
   - href: '#desktop'
     label: Desktop 安装
@@ -36,13 +36,15 @@ sections:
 
 *安装后可在「梁相案牍 → 当前版本」核对版本。*
 
+新版本发布未满24小时，安装器可能仍选中旧版。需要立即安装2.0时，可在“添加插件”填写 `dsh-liangxiang@2.0.0`；命令行同样使用该精确版本。完成后到“梁相案牍 → 当前版本”核对；若应用提示等待期或策略确认，按提示处理。
+
 以上流程无需命令行、额外市场插件或索引配置。已有「发现」或社区市场入口时，同样搜索完整包名 `dsh-liangxiang`。
 
 Desktop 的插件由应用自己的 `desktop` profile 管理。不要把下面的 `web` 命令用于 Desktop，也不要用 npm 版 DSH 命令修改它。
 
 <h2 id="cli">Cmd / Web：命令行安装</h2>
 
-这部分适用于从终端运行的 DSH Web。先按 [DSH 官方说明](https://github.com/deepseek-ai/deepseek-harness#run) 准备运行环境，退出正在运行的 WebUI，再执行：
+这部分适用于从终端运行的 DSH Web。当前DSH0.2.2要求Node24.9及以上；Desktop使用内置运行环境，无需另装Node。先按 [DSH 官方说明](https://github.com/deepseek-ai/deepseek-harness#run) 准备运行环境，退出正在运行的 WebUI，再执行：
 
 ```bash
 dsh plugin --profile web add dsh-liangxiang
@@ -65,13 +67,14 @@ npx --yes @deepseek-ai/dsh web
 
 ### Desktop
 
-1. 在 **插件 → 已安装** 中卸载梁相。
-2. 点 **添加插件**，输入 **`dsh-liangxiang`**，安装并启用新版。
-3. 在 **梁相案牍 → 当前版本** 核对版本和更新说明。
+- **支持原生更新的DSH（如0.2.2-rc.1）**：打开已安装的梁相详情，优先在 **版本** 区按应用提示更新。此入口适用于从npm注册表安装、且被宿主标为可更新的第三方插件；本地路径、Git或压缩包安装不提供此版本区。完成后按提示重启，核对 **梁相案牍 → 当前版本**。见[DSH官方说明](https://github.com/deepseek-ai/deepseek-harness/blob/66491b05e3f05ad35bcdd4f6cd7ed26041d9e3db/packages/client/ui-plugin-manager/README.zh.md#更新注册表组合包)。
+- **0.2.1-rc.2等旧入口，或没有更新入口时**：在 **插件 → 已安装** 中卸载梁相，再点 **添加插件**，输入 **`dsh-liangxiang`** 安装并启用新版。见[旧入口说明](https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/docs/upgrade-guide/v0.2.1-alpha.2/plugin-install-over-installed/guide.md)。
 
-本机香火与梁祠记录保留，请保留 DSH 数据目录。当前官方插件入口对社区插件采用卸载后重装的更新方式，见 [DSH 官方说明](https://github.com/deepseek-ai/deepseek-harness/blob/687f282e8625c6b8d11ff58211a90524be2e4317/docs/upgrade-guide/v0.2.1-alpha.2/plugin-install-over-installed/guide.md)。
+保留DSH数据目录，继续使用原身份、香火账本与梁祠记录；不要清个人Profile或重置身份。更新失败时查看应用报告的原版本保留／恢复结果，不能假定失败后一定已恢复；显示未安装时再重新安装梁相。
 
-**日终上香（可选）**：在梁相案牍点击整格开关，悬停可看 23:59 时刻与运行条件；右键夯或拉设置默认方向。默认关闭，DSH 运行时按限额尽量上香，浏览器可以关闭。
+**从1.2升级到2.0**：首次启用在线钱包仅承接当天实际余香和不足一炷进度，不补历史已过期香火；此后香火与已到账收益跨日保留。启用后，同一身份请继续使用2.0及以上版本。尚未升级的1.2用户继续原日账玩法；离线香火不进入在线钱包或梁股。
+
+**定时上香（可选）**：在梁相案牍点击整格开关，右键夯或拉设置默认方向。默认关闭；满500炷后等10分钟尝试倾炉，23:59再尝试收尾。需DSH保持运行，浏览器可以关闭，手动上香优先。
 
 卸载同样在插件页面完成。卸载插件不会自动删除本机梁相账本；不要额外删除 DSH 的数据目录。
 
@@ -114,4 +117,4 @@ HTTP_PROXY="http://127.0.0.1:7890"
 
 仍未解决时，请到[插件仓库](https://github.com/liang-today/dsh-liangxiang/issues)提交 Issue。附上系统、DSH 版本和脱敏后的错误信息，不要提交 API key 或完整日志。
 
-当前公开版是 v1.2.0。发行包也可从 [GitHub Releases](https://github.com/liang-today/dsh-liangxiang/releases) 下载，例如 `dsh-liangxiang-1.2.0.tgz`。
+当前公开版是 v2.0.0。发行包也可从 [GitHub Releases](https://github.com/liang-today/dsh-liangxiang/releases) 下载，例如 `dsh-liangxiang-2.0.0.tgz`。

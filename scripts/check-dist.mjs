@@ -77,6 +77,17 @@ for (const [relative, marker] of versionMarkers) {
   if (!html.includes(marker)) mismatchedVersions.push(`${relative}: missing ${marker}`)
 }
 
+const home = await readFile(join(root, 'index.html'), 'utf8')
+const productImages = ['main.webp', 'market.webp', 'liangci.webp']
+for (const image of productImages) {
+  const path = `/media/product/${releaseVersion}/${image}`
+  if (!home.includes(path) || !(await existsAsPage(resolve(root, `.${path}`)))) {
+    throw new Error(`Product screenshot missing: ${path}`)
+  }
+}
+if (/<video\b[^>]*\bautoplay\b/i.test(home)) throw new Error('Homepage must not autoplay historical UI videos')
+if (!home.includes('功能示例，香火数据仅作演示。')) throw new Error('Product screenshot disclosure missing')
+
 if (broken.length) {
   console.error(`Broken local links/assets:\n${broken.join('\n')}`)
   process.exit(1)

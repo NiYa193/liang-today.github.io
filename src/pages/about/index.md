@@ -23,7 +23,7 @@ sections:
 
 刚装上备 10 炷，对话还能继续攒。点一下一炷，长按 1.5 秒倾炉。同一台机器当天重装，不会再领一份见面礼。梁祠里的日梁、周梁、月梁都记五行香客。
 
-可在梁相案牍开启日终上香：DSH 运行时，于 23:59 按限额尽量倾炉；右键夯或拉，只设置默认方向，不会立即投票。默认关闭，手动上香优先。
+可在梁相案牍开启定时上香：余额满500炷后，等待10分钟尝试按限额倾炉；23:59再尝试收尾。需DSH保持运行，浏览器可以关闭。右键夯或拉只设置默认方向，不会立即投票；默认关闭，手动上香优先。
 
 输入＋输出 Token 按固定倍率凝香：Pro 类 ×1，Flash 类与其他模型 ×0.5。默认 Pro 每 50,000 Token 一炷，Flash 与其他模型每 100,000 Token 一炷。
 
@@ -68,21 +68,27 @@ sections:
 
 本项目为独立创作，与 DeepSeek 及其关联主体不存在官方关系。
 
-**当前公开版为 v1.2.0**：新增小难梁、轻落短句与可选的 23:59 自动倾炉，适配新版 DSH。
+**当前公开版为 v2.0.0**：香火能攒了，梁股开盘了。
+
+- **在线钱包**：香火收益，跨日保留；可用、冻结分开看。
+- **梁股三盘**：早、午、晚各选多空，封盘前可改可撤，午夜一起揭晓。
+- **全新水景**：余香化水、游鱼相伴，主面板与梁祠换上浅蓝新装。
+
+香火只用于插件内游玩，不兑换现金。首次启用2.0在线钱包只承接当天实际余香与进度，不补历史过期余额；启用后同一身份请继续使用2.0及以上版本。尚未升级的1.2用户继续原日账玩法。
 
 Desktop 在 **插件 → 添加插件** 输入 **`dsh-liangxiang`** 后安装并启用；安装和升级步骤见[安装指南](/guide/#desktop)。也可从 [npm](https://www.npmjs.com/package/dsh-liangxiang) 或 [GitHub Releases](https://github.com/liang-today/dsh-liangxiang/releases) 查看发行信息。
 
 社区目录：[dsh-market](https://dshmarket.com/) · [1024 Store](https://deepseek1024.com/) · [awesome-deepseek-harness](https://github.com/Dominic789654/awesome-deepseek-harness)。
 
-欢迎从个人 fork 提交改进：插件 PR 统一投向主仓 `dev`，通过检查与维护者审阅后集成；详见[贡献指南](https://github.com/liang-today/dsh-liangxiang/blob/main/CONTRIBUTING.md)。
+欢迎从个人 fork 提交改进：插件 PR 统一投向主仓 `main`，通过检查与维护者审阅后集成；详见[贡献指南](https://github.com/liang-today/dsh-liangxiang/blob/main/CONTRIBUTING.md)。
 
-感谢 **XChen446、Ritanlisa、xunxiaoQ**，以及每一位提出建议、修复问题和参与测试的社区贡献者。
+感谢 **stuffed-cat、XChen446、xunxiaoQ、Ritanlisa**，以及每一位提出建议、修复问题和参与测试的社区贡献者。
 
 <h2 id="principles">设计原则</h2>
 
 ### 现代编年志 × 克制梁祠
 
-界面以现代桌面产品为底：清晰层级、稳定信息密度与克制的中性色。日历、编年与少量朱印提供识别，暖金和朱红用于重点标记。
+界面以现代桌面产品为底：清晰层级与稳定信息密度。主面板与梁祠使用浅蓝水景，余香化水、游鱼相伴；保留原画像、香火环与熟悉的拍打、凝香和倾炉。
 
 ### 玩法轻松，事实清楚
 
